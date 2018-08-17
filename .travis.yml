@@ -3,6 +3,8 @@ solution: sharm.sln
 install:
   - sudo apt-get install -y gtk-sharp2
   - nuget restore sharm.sln
+script: 
+  - xbuild /p:Configuration=Release sharm.sln
 deploy:
  provider: azure_web_apps
  skip_cleanup: true
